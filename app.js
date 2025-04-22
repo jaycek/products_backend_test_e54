@@ -11,7 +11,7 @@ const cors = require('cors');
 const bcrypt = require('bcrypt')
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Allow only your frontend origin
+    origin: process.env.LIVE_URL, // Allow only your frontend origin
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
   }));
